@@ -1,0 +1,45 @@
+{
+  "ProjectName": "BookingDokterTest",
+  "ProjectGuid": "2ba5645e-1799-491c-8e95-6baa72dca401",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.BookingDokterTest",
+  "DisplayName": "BookingDokterTest",
+  "Author": "",
+  "Description": "BookingDokterTest",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "6.4.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{a7dd8a0c-327f-450f-b9f9-36ebef6e32b7}",
+  "WP8ProductID": "{da2efa51-6a5e-48ed-a089-3ec2653ab0f1}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.BookingDokterTest",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
