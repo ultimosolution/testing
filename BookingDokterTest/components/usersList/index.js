@@ -12,7 +12,23 @@ app.localization.registerView('usersList');
 // END_CUSTOM_CODE_usersList
 (function(parent) {
     
-    var DataChars=[{"Name":"Yonatan","Username":"ziilz","Password":"ziilz"},{"Name":"Dwi","Username":"dwi","Password":"dwi"},{"Name":"Saputra","Username":"saputra","Password":"saputra"},{"Name":"Yosin","Username":"yosin","Password":"yosin"}];
+    var DataChars;
+    $.ajax({
+                    async: false,
+                    url: "/Services/InventoryService.asmx/GetCounterDataFlat",
+                    dataType: "json",
+                    data:"{'ID':'"+key+"'}",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    dataFilter: function (data) { return data; },
+                    success: function (data) {
+                        DataChars= data;
+                        //alert(data.d)
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
 
     var dataProvider = app.data.jsonProvider,
         /// start global model properties
