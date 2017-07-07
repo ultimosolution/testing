@@ -4,20 +4,276 @@
     {
       "type": "kendo-ui-mobile:view",
       "name": "home",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:authentication",
+          "name": "homeModel",
+          "dataProvider": "jsonProvider",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Register email",
+          "registerPasswordLabel": "Password",
+          "registerNameLabel": "Name",
+          "registerLabel": "Register",
+          "registerRedirect": "bookingDokterView",
+          "gotoSigninLabel": "Register",
+          "enableLogout": true,
+          "logoutLabel": "Sign Out",
+          "enableRememberme": true,
+          "remembermeLabel": "Remember Me",
+          "emailLabel": "Email",
+          "passwordLabel": "Password",
+          "signinLabel": "Sign In",
+          "signinRedirect": "bookingDokterView"
+        }
+      ],
+      "title": "Login",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "bookingDokterView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "listKota",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Kota",
+                  "inputType": "dropdownlist",
+                  "titlePosition": "top"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "listDokter",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Dokter",
+                  "inputType": "dropdownlist",
+                  "titlePosition": "top"
+                }
+              ],
+              "name": "editableListForm1",
+              "formType": "add"
+            }
+          ],
+          "name": "bookingDokterViewModel",
+          "enableDataBinding": false,
+          "submitButton": "Check"
+        }
+      ],
+      "title": "Cari Dokter",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "bookDokterView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "test",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Data Dokter",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "value": "Dokter A\nKota Bandung"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "antrianHeading",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h1",
+                  "value": "Antrian Saat ini"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "antrianNumb",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h2",
+                  "value": "20"
+                }
+              ],
+              "name": "editableListForm3",
+              "formType": "add"
+            }
+          ],
+          "name": "bookDokterViewModel",
+          "enableDataBinding": false,
+          "submitButton": "BOOK"
+        }
+      ],
+      "title": "Book Dokter",
+      "addToNavigation": true,
+      "icon": "mostrecent"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:about",
+          "name": "aboutViewModel",
+          "appName": "BookingDokter",
+          "appVersion": "Version 1",
+          "appDescription": "Aplikasi BookingDokter adalah aplikasi untuk booking dokter secara online sehingga tidak perlu antri",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "support@example.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/BookingDokter",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/BookingDokter"
+        }
+      ],
+      "title": "About",
+      "addToNavigation": true,
+      "icon": "info"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "usersList",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [],
+          "name": "usersListModel",
+          "dataProvider": "jsonProvider",
+          "collection": "GetAllUsers",
+          "headerField": "Text",
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "listLayout": "list",
+          "hasSeparator": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": false,
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail"
+        }
+      ],
+      "title": "List Users",
+      "addToNavigation": true,
+      "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "medicines",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "name",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Value 1",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Input Name"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "val2",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Value 2",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ..."
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "result",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Hasil",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ..."
+                }
+              ],
+              "name": "editableListForm6",
+              "formType": "add"
+            }
+          ],
+          "name": "medicinesModel",
+          "enableDataBinding": false,
+          "submitButton": "Nyeeh!",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Dumb Calculator",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "homeView",
       "components": [],
-      "title": "Home View",
+      "title": "Mah Page",
       "addToNavigation": true,
       "icon": "home"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "jsonProvider",
+      "source": "json",
+      "url": "ultimosolution.com/Services/Mobile.asmx",
+      "sourcePath": "GetAllUsers",
+      "title": "JSON Data Service"
+    },
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "backendServices",
+      "source": "everlive",
+      "everliveKey": "u3ub28qw5unp4epp",
+      "offlineStorage": false,
+      "title": "Backend Services"
+    }
+  ],
   "name": "kendoUiMobileApp",
-  "navigation": "tabstrip",
-  "view": "home",
-  "transition": "slide",
-  "showMoreTab": true,
-  "skin": "nova",
-  "skinMainColor": "#32364c",
-  "skinTextColor": "#ffffff",
-  "skinAccentColor": "#ff4350"
+  "navigation": "drawer",
+  "view": "bookingDokterView",
+  "skin": "flat",
+  "skinMainColor": "#1a1a1a",
+  "skinTextColor": "#ccffff",
+  "skinAccentColor": "#10c4b2"
 }

@@ -5,6 +5,91 @@
     "qrCodeScan": "Scan"
   },
   "home": {
-    "title": "Home View"
+    "title": "Login",
+    "homeModel": {
+      "logoutLabel": "Sign Out",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "signinLabel": "Sign In",
+      "gotoRegisterLabel": "Register",
+      "remembermeLabel": "Remember Me",
+      "registerEmailLabel": "Register email",
+      "registerPasswordLabel": "Password",
+      "registerNameLabel": "Name",
+      "registerLabel": "Register",
+      "gotoSigninLabel": "Register"
+    }
+  },
+  "bookingDokterView": {
+    "title": "Cari Dokter",
+    "bookingDokterViewModel": {
+      "submitButton": "Check",
+      "editableListForm1": {
+        "listKota": {
+          "title": "Kota"
+        },
+        "listDokter": {
+          "title": "Dokter"
+        }
+      }
+    }
+  },
+  "bookDokterView": {
+    "title": "Book Dokter",
+    "bookDokterViewModel": {
+      "submitButton": "BOOK",
+      "editableListForm3": {
+        "test": {
+          "title": "Data Dokter"
+        },
+        "antrianHeading": {
+          "title": "Heading"
+        },
+        "antrianNumb": {
+          "title": "Heading"
+        }
+      }
+    }
+  },
+  "aboutView": {
+    "title": "About",
+    "aboutViewModel": {
+      "appName": "BookingDokter",
+      "appVersion": "Version 1",
+      "appDescription": "Aplikasi BookingDokter adalah aplikasi untuk booking dokter secara online sehingga tidak perlu antri",
+      "contactLabel": "Contact us",
+      "facebookLabel": "Like us on Facebook",
+      "twitterLabel": "Follow us on Twitter"
+    }
+  },
+  "usersList": {
+    "title": "List Users",
+    "usersListModel": {
+      "detailHeaderFieldValue": "Detail"
+    }
+  },
+  "medicines": {
+    "title": "Dumb Calculator",
+    "medicinesModel": {
+      "submitButton": "Nyeeh!",
+      "cancelButton": "Cancel",
+      "editableListForm6": {
+        "name": {
+          "title": "Value 1",
+          "placeholder": "Input Name"
+        },
+        "val2": {
+          "title": "Value 2",
+          "placeholder": "Type here ..."
+        },
+        "result": {
+          "title": "Hasil",
+          "placeholder": "Type here ..."
+        }
+      }
+    }
+  },
+  "homeView": {
+    "title": "Mah Page"
   }
 }

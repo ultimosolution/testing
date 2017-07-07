@@ -1,0 +1,55 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.bookingDokterView" data-show="app.bookingDokterView.onShow" data-after-show="app.bookingDokterView.afterShow" id="bookingDokterViewScreen" class="screen">
+    <div id="bookingDokterViewModel" class="form-view screen__content screen__content--form add-item-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+                    <label id="listKotaField" class="field field--drop-down km-label-above">
+
+                        <span class="field__label" data-bind="text: strings.bookingDokterView.bookingDokterViewModel.editableListForm1.listKota.title"></span>
+
+                        <select data-bind="value: addFormData.listKota" data-role="dropdownlist">
+                            <option value="First Option">First Option</option>
+                            <option value="Second Option">Second Option</option>
+                            <option value="Third Option">Third Option</option>
+                        </select>
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label id="listDokterField" class="field field--drop-down km-label-above">
+
+                        <span class="field__label" data-bind="text: strings.bookingDokterView.bookingDokterViewModel.editableListForm1.listDokter.title"></span>
+
+                        <select data-bind="value: addFormData.listDokter" data-role="dropdownlist">
+                            <option value="First Option">First Option</option>
+                            <option value="Second Option">Second Option</option>
+                            <option value="Third Option">Third Option</option>
+                        </select>
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a class="primary" data-role="button" data-bind="events: { click: bookingDokterViewModel.submit }, buttonText: strings.bookingDokterView.bookingDokterViewModel.submitButton"></a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_bookingDokterViewModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_bookingDokterViewModel -->
+    </div>
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.bookingDokterView.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_bookingDokterView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_bookingDokterView -->
+</div>
