@@ -24,8 +24,8 @@ app.localization.registerView('medicines');
                 target.set('addFormData',{
                     result:'asdsdasd'
                 })
-                var testvalue=target.get('addFormData.name');
-                var testvalue2=target.get('addFormData.val2');
+                var testvalue=target.get('addFormData','name');
+                var testvalue2=target.get('addFormData','val2');
                 alert(testvalue+testvalue2);
                 
             },
