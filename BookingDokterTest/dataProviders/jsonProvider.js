@@ -2,7 +2,7 @@
 
 (function() {
     app.data.jsonProvider = {
-        url: 'http://ultimosolution.com/Mobile.ashx'
+        url: 'http://ultimosolution.com/'
     }
 }());
 

@@ -19,7 +19,7 @@
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {
                 skin: 'flat',
-                initial: 'components/bookingDokterView/view.html'
+                initial: 'components/usersList/view.html'
             });
 
             kendo.bind($('.navigation-link-text'), app.navigation.viewModel);
