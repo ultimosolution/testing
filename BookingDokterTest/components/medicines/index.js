@@ -17,10 +17,16 @@ app.localization.registerView('medicines');
         medicinesModel = kendo.observable({
         submit: function() 
             {
+                
                 var target= parent;
+
+                
                 target.set('addFormData',{
                     result:'asdsdasd'
                 })
+                var testvalue=target.get('addFormData.name');
+                var testvalue2=target.get('addFormData.val2');
+                alert(testvalue+testvalue2);
                 
             },
         /// start add model functions
