@@ -164,7 +164,7 @@
           "components": [],
           "name": "usersListModel",
           "dataProvider": "jsonProvider",
-          "collection": "GetAllUsers",
+          "collection": "http://ultimosolution.com/Mobile.ashx",
           "headerField": "Text",
           "addItemForm": false,
           "editItemForm": false,
@@ -241,14 +241,6 @@
       "title": "Dumb Calculator",
       "addToNavigation": true,
       "icon": "home"
-    },
-    {
-      "type": "kendo-ui-mobile:view",
-      "name": "homeView",
-      "components": [],
-      "title": "Mah Page",
-      "addToNavigation": true,
-      "icon": "home"
     }
   ],
   "dataProviders": [
@@ -256,17 +248,8 @@
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonProvider",
       "source": "json",
-      "url": "ultimosolution.com/Services/Mobile.asmx",
-      "sourcePath": "GetAllUsers",
+      "url": "http://ultimosolution.com/Mobile.ashx",
       "title": "JSON Data Service"
-    },
-    {
-      "type": "kendo-ui-mobile:dataProvider",
-      "name": "backendServices",
-      "source": "everlive",
-      "everliveKey": "u3ub28qw5unp4epp",
-      "offlineStorage": false,
-      "title": "Backend Services"
     }
   ],
   "name": "kendoUiMobileApp",
