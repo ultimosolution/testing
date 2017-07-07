@@ -15,20 +15,22 @@ app.localization.registerView('medicines');
     /// start global model properties
     /// end global model properties
         medicinesModel = kendo.observable({
-        submit: function() 
-            {
-                
-                var target= parent;
+        submit: function() {
+        $.ajax({
+                async: false,
+                url: "http://ultimosolution.com/Mobile.ashx",
+                dataType: "json",
+                dataFilter: function (data) { return data; },
+                success: function (data) {
+                    result = data;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
 
-                
-                target.set('addFormData',{
-                    result:'asdsdasd'
-                })
-                var testvalue=target.get('addFormData','name');
-                var testvalue2=target.get('addFormData','val2');
-                alert(testvalue+testvalue2);
-                
-            },
+            })
+
+        },
         /// start add model functions
         /// end add model functions
 
