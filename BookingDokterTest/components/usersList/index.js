@@ -15,9 +15,8 @@ app.localization.registerView('usersList');
     var DataChars;
     $.ajax({
                     async: false,
-                    url: "/Services/InventoryService.asmx/GetCounterDataFlat",
+                    url: "http://ultimosolution.com/Mobile.ashx",
                     dataType: "json",
-                    data:"{'ID':'"+key+"'}",
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
                     dataFilter: function (data) { return data; },
