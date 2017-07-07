@@ -16,6 +16,8 @@ app.localization.registerView('medicines');
     /// end global model properties
         medicinesModel = kendo.observable({
         submit: function() {
+            var result;
+
         $.ajax({
                 async: false,
                 url: "http://ultimosolution.com/Mobile.ashx",
@@ -28,7 +30,9 @@ app.localization.registerView('medicines');
                     alert(errorThrown);
                 }
 
-            })
+            });
+
+            alert(result);
 
         },
         /// start add model functions
