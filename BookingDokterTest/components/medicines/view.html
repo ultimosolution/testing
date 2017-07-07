@@ -1,0 +1,65 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.medicines" data-show="app.medicines.onShow" data-after-show="app.medicines.afterShow" id="medicinesScreen" class="screen">
+    <div id="medicinesModel" class="form-view screen__content screen__content--form add-item-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="nameField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.medicines.medicinesModel.editableListForm6.name.title"></span>
+
+
+                        <input id="name" data-bind="value: addFormData.name, attr: { placeholder: strings.medicines.medicinesModel.editableListForm6.name.placeholder }" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="val2Field" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.medicines.medicinesModel.editableListForm6.val2.title"></span>
+
+
+                        <input id="val2" data-bind="value: addFormData.val2, attr: { placeholder: strings.medicines.medicinesModel.editableListForm6.val2.placeholder }" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="resultField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.medicines.medicinesModel.editableListForm6.result.title"></span>
+
+
+                        <input id="result" data-bind="value: addFormData.result, attr: { placeholder: strings.medicines.medicinesModel.editableListForm6.result.placeholder }" type="text">
+
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: medicinesModel.cancel }, buttonText: strings.medicines.medicinesModel.cancelButton"></a>
+                <a class="primary" data-role="button" data-bind="events: { click: medicinesModel.submit }, buttonText: strings.medicines.medicinesModel.submitButton"></a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_medicinesModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_medicinesModel -->
+    </div>
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.medicines.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_medicines -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_medicines -->
+</div>
