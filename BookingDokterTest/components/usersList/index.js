@@ -65,7 +65,7 @@ app.localization.registerView('usersList');
                 }
             },
             schema: {
-                data: 'http://ultimosolution.com/Mobile.ashx',
+                data: '{"Name":"Yonatan","Username":"ziilz","Password":"ziilz"},{"Name":"Dwi","Username":"dwi","Password":"dwi"},{"Name":"Saputra","Username":"saputra","Password":"saputra"},{"Name":"Yosin","Username":"yosin","Password":"yosin"}',
                 model: {
                     fields: {
                         'Text': {
