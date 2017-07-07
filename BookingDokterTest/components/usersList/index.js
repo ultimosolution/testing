@@ -11,6 +11,9 @@ app.localization.registerView('usersList');
 
 // END_CUSTOM_CODE_usersList
 (function(parent) {
+    
+    var DataChars=[{"Name":"Yonatan","Username":"ziilz","Password":"ziilz"},{"Name":"Dwi","Username":"dwi","Password":"dwi"},{"Name":"Saputra","Username":"saputra","Password":"saputra"},{"Name":"Yosin","Username":"yosin","Password":"yosin"}];
+
     var dataProvider = app.data.jsonProvider,
         /// start global model properties
 
@@ -211,7 +214,7 @@ app.localization.registerView('usersList');
         }
 
         if (!usersListModel.get('dataSource')) {
-            dataSource = new kendo.data.DataSource(dataSourceOptions);
+            dataSource = new kendo.data.DataSource({data:DataChars});
             usersListModel.set('dataSource', dataSource);
         }
 
