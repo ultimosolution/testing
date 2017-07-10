@@ -240,7 +240,7 @@ app.localization.registerView('usersList');
         }
 
         if (!usersListModel.get('dataSource')) {
-            dataSource = new kendo.data.DataSource(dataSourceOptions);
+            dataSource = new kendo.data.DataSource([{"Name":"Yonatan","Username":"ziilz","Password":"ziilz"},{"Name":"Dwi","Username":"dwi","Password":"dwi"},{"Name":"Saputra","Username":"saputra","Password":"saputra"},{"Name":"Yosin","Username":"yosin","Password":"yosin"}]);
             usersListModel.set('dataSource', dataSource);
         }
 
