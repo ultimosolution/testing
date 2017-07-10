@@ -66,13 +66,15 @@ app.localization.registerView('usersList');
         dataSourceOptions = {
             type: 'json',
             transport: {
-                read: function(option){
+                read: 
+                /*function(option){
                     option.success(DataChars);
-                }
-                /*{
-                    url: dataProvider.url,
-                    dataType: 'json'
                 }*/
+                {
+                    //url: dataProvider.url,
+                    url: "http://ultimosolution.com/Mobile.ashx",
+                    dataType: 'json'
+                }
             },
             error: function(e) {
 
