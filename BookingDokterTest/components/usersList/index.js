@@ -12,8 +12,8 @@ app.localization.registerView('usersList');
 // END_CUSTOM_CODE_usersList
 (function(parent) {
     
-    var DataChars=[{ "nama" : "namae no nai", "umur": "29", "data": "nein" }];
-    /*$.ajax({
+    var DataChars;
+    $.ajax({
                     async: false,
                     url: "http://ultimosolution.com/Mobile.ashx",
                     dataType: "json",
@@ -27,7 +27,7 @@ app.localization.registerView('usersList');
                     error: function (XMLHttpRequest, textStatus, errorThrown) {
                         alert(errorThrown);
                     }
-                });*/
+                });
 
     var dataProvider = app.data.jsonProvider,
         /// start global model properties
@@ -86,16 +86,16 @@ app.localization.registerView('usersList');
                 data: DataChars,
                 model: {
                     fields: {
-                        'Nama': {
-                            field: 'nama',
+                        'Name': {
+                            field: 'Name',
                             defaultValue: ''
                         },
-                        'Umur': {
-                            field: 'umur',
+                        'Username': {
+                            field: 'Username',
                             defaultValue: ''
                         },
-                        'Data': {
-                            field: 'data',
+                        'Password': {
+                            field: 'Password',
                             defaultValue: ''
                         }
 
