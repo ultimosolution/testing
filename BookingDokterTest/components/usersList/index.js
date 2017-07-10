@@ -12,7 +12,7 @@ app.localization.registerView('usersList');
 // END_CUSTOM_CODE_usersList
 (function(parent) {
     
-    var DataChars={ "taco" : "awesome", "burrito": "less awesome", "fishTaco": "1000" };
+    var DataChars=[{ "nama" : "namae no nai", "umur": "29", "data": "nein" }];
     /*$.ajax({
                     async: false,
                     url: "http://ultimosolution.com/Mobile.ashx",
@@ -83,13 +83,22 @@ app.localization.registerView('usersList');
                 }
             },
             schema: {
-                data: { "taco" : "awesome", "burrito": "less awesome", "fishTaco": "1000" },
+                data: DataChars,
                 model: {
                     fields: {
-                        'Text': {
-                            field: 'Text',
+                        'Nama': {
+                            field: 'nama',
                             defaultValue: ''
                         },
+                        'Umur': {
+                            field: 'umur',
+                            defaultValue: ''
+                        },
+                        'Data': {
+                            field: 'data',
+                            defaultValue: ''
+                        }
+
                     }
                 }
             },
