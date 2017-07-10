@@ -4,34 +4,18 @@
         <div data-role="navbar" class="header-text"> <a data-role="backbutton" data-align="left">Back</a> <span data-bind="text: strings.usersList.usersListModel.detailHeaderFieldValue"></span>            </div>
     </header>
     <div class="details-content screen__content screen__content--details">
-        <div class="km-listview-wrapper"> 
-            <!--<ul class="km-listview km-list km-listinset details-fields">-->
-            <ul class="masterDetailView list noSeparators " data-role="listview" data-auto-bind="false" data-style="inset" data-template="usersListModelTemplate" data-endless-scroll="false">
-                
-            </ul>
-
-
-            <div class="masterDetailView list noSeparators " data-role="" data-auto-bind="false" data-style="inset" data-template="DetailTemplate">
-            </div>
+        <div class="km-listview-wrapper">
+            <ul class="km-listview km-list km-listinset details-fields"> </ul>
         </div>
     </div>
     <!-- START_CUSTOM_CODE_usersListModel -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <!-- END_CUSTOM_CODE_usersListModel -->
-    <script type="text/x-kendo-template" id="DetailTemplate">
-    <div class="Detailbox">
-    # data = app.usersList.usersListModel.setCurrentItemByUid(uid); #
-    
-        <div>
-            <span><span>Nama : </span> #: data['Name'] #</span>
-        </div>
-        <div>
-            <span><span>Username : </span> #: data['Username'] #</span>
-        </div>
-    </div>
+    <script type="text/x-kendo-template" id="usersListModelTemplate"> Hello, #= firstName # #= lastName # </script>
+    <script>
+        var scriptTemplate = kendo.template($("#scriptTemplate").html());
+    var scriptData = { firstName: "John", lastName: "Doe" };
+    $("#script").html(scriptTemplate(scriptData));
 
     </script>
-
-    
-                
 </div>
