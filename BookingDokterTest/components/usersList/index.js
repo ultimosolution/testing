@@ -16,6 +16,7 @@ app.localization.registerView('usersList');
     $.ajax({
                     async: false,
                     url: "http://ultimosolution.com/Mobile.ashx",
+                    jsonp:"callback",
                     dataType: "jsonp",
                     /*type: "POST",*/
                     contentType: "application/javascript; charset=utf-8",
