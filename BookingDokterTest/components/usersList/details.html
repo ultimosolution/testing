@@ -1,33 +1,23 @@
-<div data-role="view" data-title="Details" data-model="app.usersList.usersListModel" data-bind="events: { show: detailsShow }" id="usersListModelScreen" class="screen screen--detail">
+<div data-role="view" data-title="Details" data-model="app.usersList.usersListModel" data-bind="events: { show: detailsShow }"
+    id="usersListModelScreen" class="screen screen--detail">
     <header data-role="header">
-        <div data-role="navbar" class="header-text">
-            <a data-role="backbutton" data-align="left">Back</a>
-            <span data-bind="text: strings.usersList.usersListModel.detailHeaderFieldValue"></span>
-        </div>
+        <div data-role="navbar" class="header-text"> <a data-role="backbutton" data-align="left">Back</a> <span data-bind="text: strings.usersList.usersListModel.detailHeaderFieldValue"></span>            </div>
     </header>
-
     <div class="details-content screen__content screen__content--details">
-        <div class="km-listview-wrapper">
-            # data = app.usersList.usersListModel.fixHierarchicalData(data); #
+        <div class="km-listview-wrapper"> 
             <ul class="km-listview km-list km-listinset details-fields">
-<li>
- 
-
-            <span><span>Nama : </span> #: data['Name'] #</span>
-</li>
-
-<li>
- 
-
-            <span><span>Username : </span> #: data['Username'] #</span>
-</li>
-
-
+                <li> <span><span>Nama : </span>
+                # data = app.usersList.usersListModel.fixHierarchicalData(data); #
+                 #: data['Name'] #</span>
+                </li>
+                <li> <span><span>Username : </span>
+                # data = app.usersList.usersListModel.fixHierarchicalData(data); #
+                 #: data['Username'] #</span>
+                </li>
             </ul>
         </div>
     </div>
     <!-- START_CUSTOM_CODE_usersListModel -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
     <!-- END_CUSTOM_CODE_usersListModel -->
 </div>
