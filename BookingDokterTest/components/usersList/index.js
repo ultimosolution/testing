@@ -89,7 +89,7 @@ app.localization.registerView('usersList');
                 }
             },
             schema: {
-                data: "http://ultimosolution.com/Mobile.ashx",
+                //data: "http://ultimosolution.com/Mobile.ashx",
                 model: {
                     fields: {
                         'Name': {
