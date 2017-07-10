@@ -251,6 +251,7 @@ app.localization.registerView('usersList');
         fetchFilteredData(param);
     });
 
+    
 })(app.usersList);
 
 // START_CUSTOM_CODE_usersListModel
