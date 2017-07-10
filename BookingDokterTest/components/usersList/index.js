@@ -16,8 +16,7 @@ app.localization.registerView('usersList');
     $.ajax({
                     async: false,
                     url: "http://ultimosolution.com/Mobile.ashx",
-                    jsonp:"callback",
-                    dataType: "jsonp",
+                    dataType: "json",
                     /*type: "POST",*/
                     crossDomain: true,
                     contentType: "application/javascript; charset=utf-8",
@@ -67,10 +66,13 @@ app.localization.registerView('usersList');
         dataSourceOptions = {
             type: 'json',
             transport: {
-                read: {
+                read: function(option){
+                    option.success(DataChars);
+                }
+                /*{
                     url: dataProvider.url,
                     dataType: 'json'
-                }
+                }*/
             },
             error: function(e) {
 
@@ -85,7 +87,7 @@ app.localization.registerView('usersList');
                 }
             },
             schema: {
-                data: "http://ultimosolution.com/Mobile.ashx",
+                //data: "http://ultimosolution.com/Mobile.ashx",
                 model: {
                     fields: {
                         'Name': {
@@ -240,7 +242,7 @@ app.localization.registerView('usersList');
         }
 
         if (!usersListModel.get('dataSource')) {
-            dataSource = new kendo.data.DataSource([{"Name":"Yonatan","Username":"ziilz","Password":"ziilz"},{"Name":"Dwi","Username":"dwi","Password":"dwi"},{"Name":"Saputra","Username":"saputra","Password":"saputra"},{"Name":"Yosin","Username":"yosin","Password":"yosin"}]);
+            dataSource = new kendo.data.DataSource(dataSourceOptions);
             usersListModel.set('dataSource', dataSource);
         }
 
