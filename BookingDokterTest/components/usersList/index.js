@@ -12,8 +12,8 @@ app.localization.registerView('usersList');
 // END_CUSTOM_CODE_usersList
 (function(parent) {
     
-    var DataChars;
-    $.ajax({
+    var DataChars={ "taco" : "awesome", "burrito": "less awesome", "fishTaco": "1000" };
+    /*$.ajax({
                     async: false,
                     url: "http://ultimosolution.com/Mobile.ashx",
                     dataType: "json",
@@ -27,7 +27,7 @@ app.localization.registerView('usersList');
                     error: function (XMLHttpRequest, textStatus, errorThrown) {
                         alert(errorThrown);
                     }
-                });
+                });*/
 
     var dataProvider = app.data.jsonProvider,
         /// start global model properties
