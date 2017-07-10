@@ -83,7 +83,7 @@ app.localization.registerView('usersList');
                 }
             },
             schema: {
-                data: DataChars,
+                data: { "taco" : "awesome", "burrito": "less awesome", "fishTaco": "1000" },
                 model: {
                     fields: {
                         'Text': {
