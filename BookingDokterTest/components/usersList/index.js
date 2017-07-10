@@ -19,6 +19,7 @@ app.localization.registerView('usersList');
                     jsonp:"callback",
                     dataType: "jsonp",
                     /*type: "POST",*/
+                    crossDomain: true,
                     contentType: "application/javascript; charset=utf-8",
                     dataFilter: function (data) { return data; },
                     success: function (data) {
@@ -84,7 +85,7 @@ app.localization.registerView('usersList');
                 }
             },
             schema: {
-                data: DataChars,
+                data: "http://ultimosolution.com/Mobile.ashx",
                 model: {
                     fields: {
                         'Name': {
